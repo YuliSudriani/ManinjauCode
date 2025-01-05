@@ -2,7 +2,7 @@
 """
 Created on Fri May  3 15:51:31 2024
 
-@author: informatikalipi
+@author: yuli sudriani, A.L. Latifah
 """
 import pandas as pd
 import numpy as np
@@ -631,7 +631,7 @@ plt.rcParams.update({
 })
 shap.summary_plot(sa_xg, x_test)
 
-#%% polynom SHAP : belum bisa, tanya mbak Nida
+#%% 
 
 explainer_poly = shap.Explainer(
     reg2, masker=masker, feature_names=x_train.columns

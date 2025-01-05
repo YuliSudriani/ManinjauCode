@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 29 10:26:11 2024
 
-@author: informatikalipi
+@author: yuli sudriani, A.L. Latifah
 """
 
 import pandas as pd
@@ -209,8 +209,8 @@ DOmg_l_Depth21= 'orange'
 #plot the graphic
 plt.figure(figsize=(15,10))
 plt.scatter(y_test2[:, 0], y_pred_multi[:, 0], c=DOmg_l_Depth0, s=100)
-plt.scatter(y_test2[:, 0], y_pred_multi[:, 1], c=DOmg_l_Depth2, s=100)
-plt.scatter(y_test2[:, 0], y_pred_multi[:, 2], c=DOmg_l_Depth21, s=100)
+plt.scatter(y_test2[:, 1], y_pred_multi[:, 1], c=DOmg_l_Depth2, s=100)
+plt.scatter(y_test2[:, 2], y_pred_multi[:, 2], c=DOmg_l_Depth21, s=100)
 #plt.scatter(y_test,y_pred_multi, c=colors, cmap='viridis', alpha=0.7, label='RF')
 plt.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],color='tab:red', linestyle='--')
 plt.xlabel('True Value')
@@ -270,8 +270,8 @@ mape_rf
 #plot the graphic
 plt.figure(figsize=(15,10))
 plt.scatter(y_test2[:, 0], multi_reg_pred_GBM[:, 0], c=DOmg_l_Depth0, s=160)
-plt.scatter(y_test2[:, 0], multi_reg_pred_GBM[:, 1], c=DOmg_l_Depth2, s=160)
-plt.scatter(y_test2[:, 0], multi_reg_pred_GBM[:, 2], c=DOmg_l_Depth21, s=160)
+plt.scatter(y_test2[:, 1], multi_reg_pred_GBM[:, 1], c=DOmg_l_Depth2, s=160)
+plt.scatter(y_test2[:, 2], multi_reg_pred_GBM[:, 2], c=DOmg_l_Depth21, s=160)
 #plt.scatter(y_test,multi_reg_pred_GBM, color='blue', label='RF')
 plt.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],color='tab:red', linestyle='--')
 plt.xlabel('True Value')
@@ -327,8 +327,8 @@ mape_rf
 #plot the graphic
 plt.figure(figsize=(15,10))
 plt.scatter(y_test2[:, 0], pred2[:, 0], c=DOmg_l_Depth0, s=160)
-plt.scatter(y_test2[:, 0], pred2[:, 1], c=DOmg_l_Depth2, s=160)
-plt.scatter(y_test2[:, 0], pred2[:, 2], c=DOmg_l_Depth21, s=160)
+plt.scatter(y_test2[:, 1], pred2[:, 1], c=DOmg_l_Depth2, s=160)
+plt.scatter(y_test2[:, 2], pred2[:, 2], c=DOmg_l_Depth21, s=160)
 #plt.scatter(y_test2[:, 0], pred2[:, 1], c=DOmg_l_Depth21, s=160)
 
 #plt.scatter(y_test,pred2)
@@ -512,8 +512,8 @@ mape_rf3
 #plot the graphic
 plt.figure(figsize=(15,10))
 plt.scatter(y_test2[:, 0], y_pred_RF3[:, 0], c=DOmg_l_Depth0, s=160)
-plt.scatter(y_test2[:, 0], y_pred_RF3[:, 1], c=DOmg_l_Depth2, s=160)
-plt.scatter(y_test2[:, 0], y_pred_RF3[:, 2], c=DOmg_l_Depth21, s=160)
+plt.scatter(y_test2[:, 1], y_pred_RF3[:, 1], c=DOmg_l_Depth2, s=160)
+plt.scatter(y_test2[:, 2], y_pred_RF3[:, 2], c=DOmg_l_Depth21, s=160)
 
 #plt.scatter(y_test,y_pred_RF2, color='blue', label='RF')
 plt.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],color='tab:red', linestyle='--')
