@@ -2,28 +2,19 @@
 """
 Created on Fri Mar 29 10:26:11 2024
 
-@author: yuli sudriani, A.L. Latifah
+@author: Yuli sudriani, A.L. Latifah, Foni A. Setiawan
 """
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error,r2_score,accuracy_score,median_absolute_error
+from sklearn.metrics import mean_squared_error,r2_score
 from IPython import get_ipython
-from sklearn.impute import KNNImputer
 from sklearn.preprocessing import PolynomialFeatures
-import statsmodels.api as sm
-import sklearn.metrics as metrics
-import csv
-from sklearn.linear_model import Lasso
-from sklearn.feature_selection import SelectFromModel
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import PolynomialFeatures
-from statsmodels.iolib.summary2 import summary_col
+
 get_ipython().run_line_magic('matplotlib', 'inline')
 pd.options.mode.chained_assignment = None  # default='warn'
-from pandas import DataFrame,Series
  
 #%%load online monitoring maninjau data
 df_maninjau = pd.read_excel('Maninjau_New_Dataset2.xlsx')  #CopyManinjau_New_Dataset2
@@ -490,7 +481,6 @@ importance_normalized_poly_MTR3 = np.array([float(x) for x in importance_poly_MT
 #%%RF recursive
 from sklearn.multioutput import MultiOutputRegressor
 from sklearn.ensemble import RandomForestRegressor
-from sklearn import metrics
 
 x_train, x_test, y_train, y_test = train_test_split(x_scaled_RF, y_scaled, test_size=0.15, random_state=42) #0.15
 regressor_RF2 = MultiOutputRegressor(RandomForestRegressor(n_estimators = 100,max_depth=3,random_state=42))
@@ -726,7 +716,6 @@ from tensorflow.keras.layers import Input, LSTM, Dense
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1' 
 
-import tensorflow as tf
 import tensorflow.keras.backend as K
 
 #non-recursive
@@ -838,5 +827,3 @@ shap.summary_plot(shap_values_output3, x_test)
 #shap_values_output1 = explainer([x_test], output_indices=[0])
 #shap_values_output2 = explainer([x_test], output_indices=[1])
 #shap_values_output3 = explainer([x_test], output_indices=[2])
-
-
