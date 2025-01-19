@@ -2,26 +2,20 @@
 """
 Created on Fri May  3 15:51:31 2024
 
-@author: yuli sudriani, A.L. Latifah
+@author: Yuli Sudriani, A.L. Latifah, Foni A.Setiawan
 """
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error,r2_score,accuracy_score,median_absolute_error
+from sklearn.metrics import mean_squared_error,r2_score
 from IPython import get_ipython
-from sklearn.impute import KNNImputer
 from sklearn.preprocessing import PolynomialFeatures
-#import statsmodels.api as sm
-#import sklearn.metrics as metrics
-import csv
-from sklearn.feature_selection import SelectFromModel
-from sklearn.preprocessing import StandardScaler
-from statsmodels.iolib.summary2 import summary_col
+
 get_ipython().run_line_magic('matplotlib', 'inline')
 pd.options.mode.chained_assignment = None  # default='warn'
-from pandas import DataFrame,Series
 
 #%% data pre-processing
 
@@ -314,7 +308,6 @@ plt.show()
 
 
 #%%random forest
-from sklearn.multioutput import MultiOutputRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import metrics
 
@@ -497,8 +490,6 @@ plt.tight_layout()
 plt.show()
 
 #%% evaluation metrics
-from sklearn.metrics import mean_absolute_percentage_error
-from sklearn.metrics import mean_absolute_error
 import sklearn.metrics as metrics
 
 def regression_error(y_test,y_pred):
@@ -650,6 +641,9 @@ shap.summary_plot(sa_poly, x_test)
 
 
 #sources: https://stackoverflow.com/questions/65621290/shap-explainer-constructor-error-asking-for-undocumented-positional-argument
+
+
+
 
 
 
